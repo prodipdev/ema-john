@@ -1,0 +1,28 @@
+.product {
+  border: 1px solid #b1b1b1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-info {
+  padding: 7px;
+}
+.product-info img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.product-info p {
+  margin: 0;
+}
+.product button {
+  width: 100%;
+  height: 48px;
+  background-color: #ffe0b3;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  font-size: 15px;
+}
+.product button:hover {
+  background-color: #fec876;
+}

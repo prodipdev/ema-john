@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c2b35;
+  padding: 0 90px;
+  height: 80px;
+}
+.right-side {
+  display: flex;
+  gap: 32px;
+}
+.right-side a {
+  text-decoration: none;
+  color: #ffffff;
+}

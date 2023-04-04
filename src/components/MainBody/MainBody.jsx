@@ -19,6 +19,7 @@ const MainBody = () => {
     };
     fetchProducts();
   }, []);
+
   useEffect(() => {
     const storedCart = getShoppingCart();
     const savedCart = [];

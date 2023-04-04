@@ -10,7 +10,11 @@
 }
 .product-info img {
   max-width: 100%;
+}
+.img-body {
+  overflow: hidden;
   border-radius: 8px;
+  display: flex;
 }
 .product-info p {
   margin: 0;

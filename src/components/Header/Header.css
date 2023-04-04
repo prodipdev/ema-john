@@ -5,6 +5,9 @@
   background-color: #1c2b35;
   padding: 0 90px;
   height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .right-side {
   display: flex;
@@ -13,4 +16,10 @@
 .right-side a {
   text-decoration: none;
   color: #ffffff;
+}
+.scroll-percent {
+  background-color: rgb(255, 0, 8);
+  position: sticky;
+  top: 80px;
+  z-index: 100;
 }

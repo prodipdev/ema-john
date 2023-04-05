@@ -3,6 +3,8 @@ import { addToDb, getShoppingCart } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./MainBody.css";
+import { Link } from "react-router-dom";
+import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/solid";
 
 const MainBody = () => {
   const [products, setProducts] = useState([]);
@@ -62,7 +64,11 @@ const MainBody = () => {
         ))}
       </div>
       <div>
-        <Cart cart={cart} />
+        <Cart cart={cart}>
+          <Link to={"/order-review"} className="btn btn-orange">
+            Review Order <ArrowRightOnRectangleIcon className="icon" />
+          </Link>
+        </Cart>
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 import React from "react";
 import "./Cart.css";
+import { ArrowPathIcon } from "@heroicons/react/24/solid";
 
-const Cart = (props) => {
-  const cart = props.cart;
-
+const Cart = ({ cart, handleClearBtn, children }) => {
   let quantity = 0;
   let totalPrice = 0;
   let totalShipping = 0;
@@ -26,6 +25,11 @@ const Cart = (props) => {
       <p>Total Shipping: ${totalShipping}</p>
       <p>Tax: ${tax.toFixed(2)}</p>
       <h4>Grand Total: ${grandTotal.toFixed(2)}</h4>
+      <button onClick={handleClearBtn} className="btn btn-clear">
+        Clear Cart
+        <ArrowPathIcon className="icon" />
+      </button>
+      {children}
     </div>
   );
 };

@@ -9,3 +9,27 @@
   margin-top: 0;
   text-align: center;
 }
+
+.btn {
+  width: 90%;
+  height: 40px;
+  border: none;
+  text-decoration: none;
+  margin: 10px auto;
+  border-radius: 5px;
+  color: white;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-clear {
+  background-color: rgb(246, 6, 6);
+}
+.btn-orange {
+  background-color: orange;
+}
+.btn .icon {
+  width: 24px;
+  margin-left: 5px;
+}

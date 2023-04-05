@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import OrderItem from "./OrderItem";
 import "./OrderReview.css";
-import { removeFromDb } from "../../utilities/fakedb";
+import { deleteShoppingCart, removeFromDb } from "../../utilities/fakedb";
+import { CreditCardIcon } from "@heroicons/react/24/solid";
 
 const OrderReview = () => {
   const cartProducts = useLoaderData();
@@ -14,6 +15,11 @@ const OrderReview = () => {
     const remaining = cart.filter((product) => product.id !== id);
     setCart(remaining);
     removeFromDb(id);
+  };
+  // Clear Cart Items
+  const handleClearBtn = () => {
+    setCart([]);
+    deleteShoppingCart();
   };
 
   return (
@@ -28,7 +34,11 @@ const OrderReview = () => {
         ))}
       </div>
       <div>
-        <Cart cart={cart}></Cart>
+        <Cart handleClearBtn={handleClearBtn} cart={cart}>
+          <Link to={"/checkout"} className="btn btn-orange">
+            Proceed Checkout <CreditCardIcon className="icon" />
+          </Link>
+        </Cart>
       </div>
     </div>
   );

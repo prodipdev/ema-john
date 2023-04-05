@@ -31,7 +31,7 @@ const Product = (props) => {
           <motion.img
             animate={animation}
             whileHover={hoverAnimation}
-            src={img}
+            src={img || "..."}
             alt=""
           />
         </div>

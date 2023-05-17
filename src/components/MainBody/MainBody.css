@@ -10,3 +10,20 @@
   margin-top: 3rem;
   padding-left: 3rem;
 }
+
+.pagination {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.pagination button {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.pagination select {
+  height: 30px;
+  width: 50px;
+}
+.pagination .selected {
+  background-color: orange;
+}

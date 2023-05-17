@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 const Header = () => {
   // const [scrollPercent, setScrollPercent] = useState(0);
 
@@ -17,6 +18,7 @@ const Header = () => {
   //   };
   // }, []);
 
+  const { user, logOut } = useContext(AuthContext);
   return (
     <>
       <div className="navbar">
@@ -27,7 +29,19 @@ const Header = () => {
           <Link to="/">Shop</Link>
           <Link to="/order-review">Order Review</Link>
           <Link to="/inventory">Manage Inventory</Link>
-          <Link to="/login">Login</Link>
+          <a>{user && user.email}</a>
+          {user ? (
+            <button className="btn-logout" onClick={() => logOut()}>
+              Log Out
+            </button>
+          ) : (
+            <Link className="btn-logout" to="/login">
+              Login
+            </Link>
+          )}
+          <Link className="btn-signup" to="/signup">
+            Sign Up
+          </Link>
         </div>
       </div>
       {/* <div

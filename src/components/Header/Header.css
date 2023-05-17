@@ -1,16 +1,18 @@
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #1c2b35;
-  padding: 0 90px;
-  height: 80px;
+  padding: 10px 90px;
+  min-height: 80px;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 .right-side {
   display: flex;
+  align-items: center;
   gap: 32px;
 }
 .right-side a {
@@ -22,4 +24,19 @@
   position: sticky;
   top: 80px;
   z-index: 100;
+}
+.btn-logout {
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: black !important;
+}
+.btn-logout:hover {
+  background-color: aliceblue;
+}
+.btn-signup {
+  border: 1px solid #ffffff;
+  padding: 6px 8px;
+  border-radius: 5px;
 }
